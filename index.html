@@ -1,213 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>RamKumar | Mobile App Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ram Kumar Portfolio</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
 background:#0f172a;
 color:white;
 }
 
-header{
+.hero-container{
+width:95%;
+margin:auto;
+margin-top:40px;
+border-radius:25px;
+padding:50px 80px;
+
+background:linear-gradient(120deg,#1d4ed8,#020617);
 display:flex;
 justify-content:space-between;
-padding:20px 60px;
-background:#020617;
+align-items:center;
+min-height:80vh;
+position:relative;
+overflow:hidden;
 }
 
-header a{
+.navbar{
+position:absolute;
+top:30px;
+left:60px;
+right:60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+.nav-links a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+opacity:.8;
+}
+
+.nav-links a:hover{
+opacity:1;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.welcome{
+color:#60a5fa;
+margin-bottom:15px;
+}
+
+.hero-text h1{
+font-size:56px;
+line-height:1.2;
+}
+
+.hero-text span{
+color:#3b82f6;
+}
+
+.hero-text p{
+margin-top:20px;
+opacity:.8;
+}
+
+.buttons{
+margin-top:35px;
+}
+
+.btn{
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+margin-right:15px;
+}
+
+.btn-primary{
+background:#60a5fa;
+color:white;
+}
+
+.btn-outline{
+border:2px solid #60a5fa;
+color:white;
+}
+
+.hero-image{
+position:relative;
+}
+
+.profile-frame{
+width:340px;
+height:430px;
+border-radius:180px;
+padding:6px;
+background:linear-gradient(180deg,#60a5fa,#2563eb);
+}
+
+.profile-frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:180px;
+}
+
+.social{
+position:absolute;
+right:-60px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.social a{
+width:40px;
+height:40px;
+border-radius:50%;
+background:#1e3a8a;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
 text-decoration:none;
-margin:0 10px;
+font-size:14px;
 }
 
-.hero{
-text-align:center;
-padding:120px 20px;
-background:linear-gradient(135deg,#2563eb,#7c3aed);
+.scroll{
+position:absolute;
+bottom:20px;
+left:60px;
+opacity:.6;
+font-size:14px;
 }
-
-.hero h1{
-font-size:48px;
-margin:10px 0;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.button{
-background:white;
-color:#2563eb;
-padding:12px 25px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.section{
-padding:80px 60px;
-}
-
-.skills span{
-display:inline-block;
-background:#1e293b;
-padding:10px 18px;
-margin:8px;
-border-radius:8px;
-}
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-}
-
-.play-link{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-  
 
 </style>
 </head>
 
+
 <body>
 
-<header>
-<h3>RamKumar</h3>
 
-<div>
+<div class="hero-container">
+
+
+<div class="navbar">
+
+<div class="logo">Ram Kumar</div>
+
+<div class="nav-links">
 <a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#">About</a>
+<a href="#">Portfolio</a>
+<a href="#">Testimonials</a>
+<a href="#">Contact</a>
 </div>
 
-</header>
+</div>
 
-<section class="hero">
 
-<h1>RamKumar</h1>
 
-<p>Senior Mobile App Developer</p>
+<div class="hero-text">
 
-<p>Android • Java • Kotlin • Jetpack Compose • Flutter • React Native</p>
+<p class="welcome">Welcome to my portfolio!</p>
 
-<a class="button" href="#projects">View Projects</a>
-
-</section>
-
-<section id="about" class="section">
-
-<h2>About Me</h2>
+<h1>Hello, my name's <span>Ram</span>.</h1>
 
 <p>
-I am a Senior Mobile App Developer with 10+ years of experience
-building Android and cross-platform applications using Java, Kotlin,
-Jetpack Compose, Flutter and React Native.
+Senior Mobile App Developer with 10+ years experience building
+Android, Kotlin, Flutter and React Native applications.
 </p>
 
-</section>
+<div class="buttons">
 
-<section id="skills" class="section">
+<a class="btn btn-primary" href="#">View My Apps</a>
 
-<h2>Skills</h2>
+<a class="btn btn-outline" href="#">Contact Me</a>
 
-<div class="skills">
-
-<span>Android</span>
-<span>Java</span>
-<span>Kotlin</span>
-<span>Jetpack Compose</span>
-<span>Flutter</span>
-<span>React Native</span>
-<span>Firebase</span>
-<span>REST APIs</span>
-<span>Git</span>
-
-</div>
-
-</section>
-
-<section id="projects" class="section">
-
-<h2>Projects</h2>
-
-<div class="projects">
-  
-<div class="card">
-<h3>Islamic Shop</h3>
-<p>Islamic Shop is an online store offering a wide range of Islamic products in one place. You can shop for Hijabs, Abayas, Thobes, Islamic books, and halal products with ease. It provides quality items for daily use and religious needs, making Islamic shopping simple and convenient.</p>
-</div>
-
-<div class="card">
-<h3>Paddy Varieties</h3>
-<p>Paddy Varieties provides information about different types of rice grown in various regions. It helps farmers and users understand the characteristics, growing conditions, yield potential, and duration of each variety. The app or resource makes it easy to explore and learn about traditional and modern paddy varieties used in agriculture.</p>
-</div>
-  
-<div class="card">
-<h3>Device Insights</h3>
-<p>Device Insights is a simple and powerful utility app that provides a quick overview of your device’s hardware and system status. It lets you monitor RAM usage, check battery health and charging status, and view storage details in a clean and easy-to-use interface. Perfect for keeping track of your device’s performance in real time.</p>
-</div>
-
-<div class="card">
-<h3>Sorkal Puzzle</h3>
-<p>Sorkal Puzzle is the ultimate Tamil word game that challenges your vocabulary and thinking skills. Discover hidden Tamil words, solve fun puzzles, and improve your language knowledge while enjoying an engaging and entertaining gameplay experience. Perfect for Tamil language lovers of all ages.</p>
 </div>
 
 </div>
 
-</section>
 
-<section id="contact" class="section">
 
-<h2>Contact</h2>
+<div class="hero-image">
 
-<p>Email: ramkumarperumal810@gmail.com</p>
-<p>
-Phone No: 
-<a class="play-link" href="tel:+919999999999">+91 9597282954</a>
-</p>
-<p>
-Google Play: 
-<a class="play-link" href="https://play.google.com/store/apps/developer?id=Ramkumar+Perumal" target="_blank">
-https://play.google.com/store/apps/developer?id=Ramkumar+Perumal
-</a>
-</p>
+<div class="profile-frame">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+</div>
 
-</section>
 
-<footer>
+<div class="social">
+<a href="#">in</a>
+<a href="#">gh</a>
+<a href="#">tw</a>
+</div>
 
-<p>© 2026 RamKumar</p>
+</div>
 
-</footer>
+
+<div class="scroll">Scroll Down</div>
+
+
+</div>
+
 
 </body>
 </html>
