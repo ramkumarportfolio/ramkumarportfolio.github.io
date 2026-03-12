@@ -22,7 +22,7 @@ background:#0f172a;
 color:white;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero-container{
 width:95%;
@@ -36,7 +36,6 @@ justify-content:space-between;
 align-items:center;
 min-height:80vh;
 position:relative;
-overflow:hidden;
 }
 
 .navbar{
@@ -46,7 +45,6 @@ left:60px;
 right:60px;
 display:flex;
 justify-content:space-between;
-align-items:center;
 }
 
 .logo{
@@ -61,10 +59,6 @@ color:white;
 opacity:.8;
 }
 
-.nav-links a:hover{
-opacity:1;
-}
-
 .hero-text{
 max-width:500px;
 }
@@ -76,7 +70,6 @@ margin-bottom:15px;
 
 .hero-text h1{
 font-size:56px;
-line-height:1.2;
 }
 
 .hero-text span{
@@ -89,7 +82,7 @@ opacity:.8;
 }
 
 .buttons{
-margin-top:35px;
+margin-top:30px;
 }
 
 .btn{
@@ -124,36 +117,7 @@ object-fit:cover;
 border-radius:180px;
 }
 
-.social{
-position:absolute;
-right:-60px;
-top:50%;
-transform:translateY(-50%);
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.social a{
-width:40px;
-height:40px;
-border-radius:50%;
-background:#1e3a8a;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-text-decoration:none;
-}
-
-.scroll{
-position:absolute;
-bottom:20px;
-left:60px;
-opacity:.6;
-}
-
-/* GENERAL SECTION */
+/* SECTIONS */
 
 .section{
 padding:60px 20px;
@@ -188,18 +152,50 @@ border-radius:8px;
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 margin-top:40px;
 }
 
 .card{
 background:#1e293b;
-padding:20px;
-border-radius:10px;
+padding:22px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+height:100%;
+transition:all .3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.4);
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:12px;
+color:#60a5fa;
+}
+
+.card p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* TECHNOLOGY TAGS */
+
+.tech{
+margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.tech span{
+background:#334155;
+padding:5px 10px;
+border-radius:6px;
+font-size:12px;
+color:#93c5fd;
 }
 
 /* CONTACT */
@@ -215,81 +211,10 @@ padding:20px;
 background:#020617;
 }
 
-@media (max-width: 768px){
-
-.hero-container{
-flex-direction:column;
-padding:40px 25px;
-text-align:center;
-}
-
-.navbar{
-position:relative;
-flex-direction:column;
-gap:10px;
-top:0;
-left:0;
-right:0;
-margin-bottom:30px;
-}
-
-.nav-links{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-}
-
-.nav-links a{
-margin:0 8px;
-font-size:14px;
-}
-
-.hero-text h1{
-font-size:36px;
-}
-
-.hero-text{
-max-width:100%;
-}
-
-.profile-frame{
-width:250px;
-height:320px;
-margin-top:30px;
-}
-
-.social{
-display:none;
-}
-
-.buttons{
-display:flex;
-flex-direction:column;
-gap:12px;
-align-items:center;
-}
-
-.btn{
-margin:0;
-width:200px;
-text-align:center;
-}
-
-.scroll{
-display:none;
-}
-
-}
-  
 </style>
 </head>
 
-
 <body>
-
-
-<!-- HERO SECTION -->
 
 <div class="hero-container">
 
@@ -304,8 +229,6 @@ display:none;
 <a href="#contact">Contact</a>
 </div>
 </div>
-
-
 
 <div class="hero-text">
 
@@ -334,26 +257,11 @@ Download CV
 
 </div>
 
-
-
-<div class="hero-image">
-
 <div class="profile-frame">
 <img src="images/profile.jpg" alt="Ram Kumar">
 </div>
 
-<div class="social">
-<a href="#">in</a>
-<a href="#">gh</a>
-<a href="#">tw</a>
 </div>
-
-</div>
-
-</div>
-
-
-<!-- ABOUT -->
 
 <section class="section" id="about">
 
@@ -362,14 +270,10 @@ Download CV
 <p>
 I am a Senior Mobile App Developer with over 10 years of experience
 building Android and cross-platform mobile applications. I specialize
-in Kotlin, Jetpack Compose, Flutter, and React Native, and have
-experience developing IoT, utility, and productivity applications.
+in Kotlin, Jetpack Compose, Flutter, and React Native.
 </p>
 
 </section>
-
-
-<!-- SKILLS -->
 
 <section class="section" id="skills">
 
@@ -390,66 +294,109 @@ experience developing IoT, utility, and productivity applications.
 
 </section>
 
-
-<!-- PROJECTS -->
-
 <section class="section" id="projects">
 
 <h2>Projects</h2>
 
 <div class="projects">
-  
+
 <div class="card">
 <h3>SparesCNX</h3>
-<p>SparesCNX is a digital platform designed to optimise the ship supply chain by providing automated inventory management and spare-parts tracking solutions using IoT and RFID technologies for real-time asset visibility. The platform helps maritime companies efficiently manage spare parts, streamline procurement processes, and reduce operational costs for both buyers and suppliers.</p>
+<p>Ship supply chain platform with automated inventory tracking using IoT and RFID.</p>
+<div class="tech">
+<span>Android</span>
+<span>Jetpack Compose UI</span>  
+<span>React Native</span>
+<span>IoT</span>
+<span>RFID</span>
+</div>
 </div>
 
 <div class="card">
 <h3>Amplitech IoT</h3>
-<p>Developed an Android IoT device management application using AWS IoT MQTT SDK with secure communication, real-time device monitoring, scheduling, power analytics, and integrations with AWS IoT Core, Cognito, Firebase OAuth, and Cloud Messaging.</p>
+<p>IoT device management application with AWS IoT MQTT communication and power analytics.</p>
+<div class="tech">
+<span>Android</span>  
+<span>Java</span>
+<span>AWS IoT</span>
+<span>MQTT</span>
+<span>Firebase</span>
+</div>
 </div>
 
 <div class="card">
-<h3>Sathiyam TV – News App</h3>
-<p>Sathiyam TV is a mobile application powered by a WordPress backend, delivering news content and live streaming to users</p>
+<h3>Sathiyam TV</h3>
+<p>News and live streaming application powered by WordPress backend.</p>
+<div class="tech">
+<span>Android</span>
+<span>Java</span>
+<span>WordPress</span>
+<span>WordPress</span>  
+<span>REST API</span>
+</div>
 </div>
 
 <div class="card">
-<h3>Sawyouu (Flutter)</h3>
-<p>Sawyouu is a community-driven dating and social collaboration app enabling users to connect, chat, share photos, and exchange compliments.</p>
+<h3>Sawyouu</h3>
+<p>Social collaboration and dating application built using Flutter.</p>
+<div class="tech">
+<span>Flutter</span>
+<span>Dart</span>
+<span>Firebase</span>
+</div>
 </div>
 
 <div class="card">
 <h3>Nagercoil.com</h3>
-<p>Nagercoil.com is a multi-service online platform supporting food & drink delivery, medicine, movies, grocery, and travel & tours.</p>
-</div>  
-  
+<p>Multi-service platform supporting food delivery, grocery and travel services.</p>
+<div class="tech">
+<span>Android</span>
+<span>Kotlin</span>
+<span>Firebase</span>  
+</div>
+</div>
+
 <div class="card">
 <h3>Islamic Shop</h3>
-<p>Online Islamic shopping app with hijabs, abayas and halal products.</p>
+<p>E-commerce application selling Islamic products.</p>
+<div class="tech">
+<span>Android</span>
+<span>Java</span>
+<span>Magento</span> 
 </div>
-  
+</div>
+
 <div class="card">
 <h3>Device Insights</h3>
-<p>Utility app showing RAM usage, battery status and storage details.</p>
+<p>Utility app displaying RAM usage, battery health and storage information.</p>
+<div class="tech">
+<span>Android</span>  
+<span>Kotlin</span>
+<span>Jetpack Compose UI</span>
+</div>
 </div>
 
 <div class="card">
 <h3>Sorkal Puzzle</h3>
-<p>Tamil word puzzle game for improving vocabulary.</p>
+<p>Tamil word puzzle game improving vocabulary.</p>
+<div class="tech">
+<span>Kotlin</span>
+<span>Jetpack Compose UI</span>
+</div>
 </div>
 
 <div class="card">
 <h3>Paddy Varieties</h3>
-<p>Application showing different rice varieties and farming information.</p>
+<p>Application displaying rice varieties and farming information.</p>
+<div class="tech">
+<span>Android</span>
+<span>Kotlin</span>
+</div>
 </div>
 
 </div>
 
 </section>
-
-
-<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
@@ -458,7 +405,7 @@ experience developing IoT, utility, and productivity applications.
 <p>Email: ramkumarperumal810@gmail.com</p>
 
 <p>
-<a href="https://play.google.com/store/apps/developer?id=Ramkumar+Perumal" target="_blank">
+<a href="https://play.google.com/store/apps/developer?id=Ramkumar+Perumal">
 View My Apps on Google Play
 </a>
 </p>
@@ -467,13 +414,9 @@ View My Apps on Google Play
 
 </section>
 
-
 <footer>
-
 <p>© 2026 Ram Kumar</p>
-
 </footer>
-
 
 </body>
 </html>
